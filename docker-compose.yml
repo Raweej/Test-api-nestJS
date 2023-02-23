@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  backend:
+    container_name: tes_backend
+    build: .
+    command: npm run start:prod
+    ports:
+      - 4000:4000
+    restart: unless-stopped
+    # env_file: .env
